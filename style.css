@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+html,
+body {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    background-color: hsl(206, 47%, 93%);
+    height: 100%;
+}
+
+
+*,
+*::after *::before {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+}
+
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide-head {
+    visibility: hidden;
+    position: absolute;
+}
+
+.grid-container {
+    width: 635px;
+    height: 473px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 214px 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin-top: 164px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.grid-main {
+    padding: 38px;
+    background-color: #fff;
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+.grid-main h2.header {
+    color: hsl(179, 62%, 43%);
+}
+
+.grid-main h3.guarantee {
+    color: hsl(71, 73%, 54%);
+    margin-top: 24px;
+    font-size: 1.11rem;
+}
+
+.grid-main p.desc {
+    color: hsl(218, 22%, 67%);
+    margin-top: 15px;
+    letter-spacing: -0.1px;
+    line-height: 24px;
+}
+
+.grid-sub {
+    color: hsl(204, 43%, 93%);
+    padding: 38px;
+    background-color: hsl(179, 62%, 43%);
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.grid-sub h2.monthly {
+    font-size: 1.12rem;
+    margin-top: 4px;
+}
+
+.grid-sub .price-tag {
+    margin-top: 14px;
+    display: flex;
+    justify-content: start;
+}
+
+
+.grid-sub span.price {
+    font-size: 2.1rem;
+    font-weight: bold;
+}
+
+.grid-sub .month {
+    font-weight: 400;
+    opacity: 0.6;
+    padding: 10px;
+}
+
+.grid-sub .sub-info {
+    margin: 10px 0 0 2px;
+    font-size: 0.98rem;
+}
+
+button.sign-up {
+    color: hsl(204, 43%, 93%);
+    width: 98%;
+    margin-top: 30px;
+    margin-left: 2px;
+    padding: 15px 0;
+    background: hsl(71, 73%, 54%);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button.sign-up:hover {
+    background: hsl(137, 40%, 44%);
+}
+
+.grid-why {
+    color: hsl(204, 43%, 93%);
+    padding: 38px;
+    background-color: hsl(179, 47%, 52%);
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.grid-why h2.why {
+    font-size: 1.12rem;
+    margin-top: 4px;
+    margin-left: 2px;
+}
+
+.grid-why pre {
+    position: relative;
+    font-size: 0.87rem;
+    font-family: 'Karla', sans-serif;
+    line-height: 20px;
+    margin-top: 19px;
+    left: -32px;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 375px) {
+
+    main {
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .grid-container {
+        width: 315px;
+        height: 100%;
+        margin-top: 82px;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .grid-main {
+        width: 100%;
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .grid-main h2.header {
+        color: hsl(179, 62%, 43%);
+        font-size: 1.2rem;
+    }
+
+    .grid-main h3.guarantee {
+        width: 90%;
+        overflow-wrap: break-word;
+        font-size: 0.9rem;
+    }
+
+    .grid-main p.desc {
+        width: 85%;
+        overflow-wrap: break-word;
+        font-size: 0.85rem;
+    }
+
+    .grid-main,
+    .grid-sub,
+    .grid-why {
+        padding: 25px;
+    }
+
+    .grid-sub {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .grid-sub h2.monthly {
+        margin-top: 0;
+    }
+
+    .grid-why {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+
+    button.sign-up {
+        width: 99%;
+        margin-top: 36px;
+    }
+}
